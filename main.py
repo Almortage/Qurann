@@ -46,7 +46,7 @@ REPLY_MESSAGE_BUTTONS = [
     ]
 ]
 
-@app.on_message(filters.command(["/start"], ""))
+@app.message_handler(commands=["start"])
 async def madison(client: Client, message: Message): 
     text = REPLY_MESSAGE
     reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, one_time_keyboard=True, resize_keyboard=True)
@@ -189,4 +189,4 @@ async def huhh(client: Client, message: Message):
 
     )
     
-app.run()
+bot.run()
