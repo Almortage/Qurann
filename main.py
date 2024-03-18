@@ -7,7 +7,7 @@ from config import Config
 from pyrogram import filters
 import random
 from pyrogram import Client
-from pyrogram import app
+import app
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from random import  choice, randint
 
