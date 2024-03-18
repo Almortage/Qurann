@@ -62,7 +62,7 @@ async def upbkgt(client: Client, message: Message):
     )
 
 
-@app.on_message(filters.command(["كتب دينية"]!, ""))
+@app.on_message(filters.command(["كتب دينية"], ""))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,1959)
     url = f"https://t.me/kotobeslameah/{rl}"
