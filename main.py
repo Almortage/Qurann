@@ -7,6 +7,7 @@ from config import Config
 from pyrogram import filters
 import random
 from pyrogram import Client
+import app
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from random import  choice, randint
 
@@ -45,7 +46,7 @@ REPLY_MESSAGE_BUTTONS = [
     ]
 ]
 
-@app.on_message(commands=["start"])
+@app.on_message(filters.command(commands=['help','start'], prefixes=['!', '/'], case_sensitive = False))
 async def madison(client: Client, message: Message): 
     text = REPLY_MESSAGE
     reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, one_time_keyboard=True, resize_keyboard=True)
